@@ -20,7 +20,7 @@ export default new Router({
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    {path: '/home', component: HelloWorld},
+    {path: '/home', components: {a: HelloWorld}},
     {path: '*', component: Second}
   ]
 })
