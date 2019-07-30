@@ -1,26 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/Home'
 import Second from '@/components/Second'
 
 Vue.use(VueRouter)
 
-/*
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
-})
-*/
-
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    {path: '/home', components: {a: HelloWorld}},
+    {path: '/home', components: {a: Home}},
     {path: '*', component: Second}
   ]
 })
