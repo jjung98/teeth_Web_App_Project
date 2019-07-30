@@ -3,7 +3,7 @@
     <!--<img src="./assets/logo.png">-->
     <center>
       <h1 id="title">{{title}}</h1>
-      <div class="icon" style="float: right; width: fit-content">
+      <div class="icon">
        <p>Login</p>
        <p>Sign</p>
       </div>
@@ -17,7 +17,8 @@ export default {
   name: 'App',
   data () {
     return {
-      title: '치매예방 구강재활'
+      title: '치매예방 구강재활',
+      login: '<a href="">Login</a>'
     }
   }
 }
@@ -40,10 +41,19 @@ export default {
     display: inline-block;
 }
 
+.icon{
+  width: fit-content;
+  float: right;
+  margin-right: 2%;
+}
+
 .icon p{
   text-align: right;
   width: fit-content;
   display: inline-block;
   font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: underline;
 }
 </style>

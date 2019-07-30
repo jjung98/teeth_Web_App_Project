@@ -25,10 +25,10 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      Dementia_diagnostic_test_img: require('../assets/test.png'),
-      Dementia_Prevention_Game_img: require('../assets/game.png'),
-      Oral_Pilates_Video_img: require('../assets/video.png'),
-      My_info_img: require('../assets/my_info.png')
+      Dementia_diagnostic_test_img: require('../assets/test.jpg'),
+      Dementia_Prevention_Game_img: require('../assets/game.jpg'),
+      Oral_Pilates_Video_img: require('../assets/video.jpg'),
+      My_info_img: require('../assets/my_info.jpg')
     }
   }
 }
