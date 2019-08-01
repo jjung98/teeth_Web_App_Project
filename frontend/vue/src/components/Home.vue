@@ -1,34 +1,18 @@
 <template>
   <div class="home">
-    <div>
-      <img :src = "Dementia_diagnostic_test_img">
-      <p>치매 진단 테스트</p>
-    </div>
-    <div>
-      <img :src = "Dementia_Prevention_Game_img">
-      <p>치매 예방 게임</p>
-    </div>
-    <div>
-      <img :src = "Oral_Pilates_Video_img">
-      <p>오랄 필라테스 영상</p>
-    </div>
-    <div>
-      <img :src = "My_info_img">
-      <p>내정보</p>
-    </div>
+    <h1>당신의 뇌,</h1>
+    <h1>지금 바로 확인하세요!</h1>
+    <button id="confirm" v-on:click="btn_confirm">확인하기</button>
   </div>
-
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      Dementia_diagnostic_test_img: require('../assets/test.jpg'),
-      Dementia_Prevention_Game_img: require('../assets/game.jpg'),
-      Oral_Pilates_Video_img: require('../assets/video.jpg'),
-      My_info_img: require('../assets/my_info.jpg')
+  name: 'home',
+  // 메소드는 methods 객체 안에 정의
+  methods: {
+    btn_confirm: function (event) {
+      alert('Hello ' + this.name)
     }
   }
 }
@@ -37,13 +21,25 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .home{
-    margin-top: 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    font-size: 100%;
   }
 
-  .home div{
-    width: fit-content;
-    display: inline-block;
-    margin-right: 1%;
-    margin-left: 1%;
+  #confirm{
+    margin-top: 10%;
+    padding: 15px 25px;
+    background-color: #4374D9;
+    border: none;
+    color: #FFFF;
+  }
+  #confirm:hover{
+    color: #000000;
   }
 </style>
