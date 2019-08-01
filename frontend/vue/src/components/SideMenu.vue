@@ -54,6 +54,20 @@ export default {
       link_sign: 'http://localhost:8080/sign'
     }
   },
+  created () {
+    const imgLogWidth = this.$refs.refLogo.width
+    const imgLogHeight = this.$refs.refLogo.height
+
+    const ulObject = this.$refs.reful
+    const createrObject = this.$refs.refcreater
+    const userinfoObject = this.$refs.refUserInfo
+
+    ulObject.style.width = (imgLogWidth - 60) + 'px'
+    ulObject.style.marginTop = imgLogHeight + 'px'
+    createrObject.style.width = (imgLogWidth - imgLogWidth / 5) + 'px'
+    createrObject.style.marginLeft = (imgLogWidth / 5) / 2 + 'px'
+    userinfoObject.style.height = imgLogHeight + 'px'
+  },
   mounted () {
     const imgLogWidth = this.$refs.refLogo.width
     const imgLogHeight = this.$refs.refLogo.height
