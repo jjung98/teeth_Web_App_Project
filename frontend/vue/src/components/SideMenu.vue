@@ -37,8 +37,8 @@
     </div>
     <div ref="refUserInfo" id="user_info">
       <div>
-        <a href="http://localhost:8080/login">로그인</a>
-        <a href="http://localhost:8080/sign">회원가입</a>
+        <a v-bind:href="link_login">로그인</a>
+        <a v-bind:href="link_sign">회원가입</a>
       </div>
     </div>
   </div>
@@ -49,7 +49,9 @@ export default {
   name: 'submenu',
   data () {
     return {
-      img_logo: require('../assets/teeth_logo.png')
+      img_logo: require('../assets/teeth_logo.png'),
+      link_login: 'http://localhost:8080/login',
+      link_sign: 'http://localhost:8080/sign'
     }
   },
   mounted () {

@@ -1,24 +1,21 @@
 <template>
   <div class="home">
-    <h1>당신의 뇌,</h1>
-    <h1>지금 바로 확인하세요!</h1>
-    <button id="confirm" v-on:click="btn_confirm">확인하기</button>
+    <h1>앗 여기는!!!</h1>
+    <h1>아직 개발중...ㅎ</h1>
+    <button id="return" v-on:click="btn_return">홈으로 돌아가기</button>
   </div>
 </template>
-
 <script>
 export default {
   name: 'home',
   // 메소드는 methods 객체 안에 정의
   methods: {
-    btn_confirm: function (event) {
+    btn_return: function (event) {
       this.$router.push('/main')
     }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .home{
     position: absolute;
@@ -32,14 +29,14 @@ export default {
     font-size: 100%;
   }
 
-  #confirm{
+  #return{
     margin-top: 10%;
     padding: 15px 25px;
     background-color: #4374D9;
     border: none;
     color: #FFFF;
   }
-  #confirm:hover{
+  #return:hover{
     color: #000000;
   }
 </style>
