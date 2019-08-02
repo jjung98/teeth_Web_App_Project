@@ -1,3 +1,4 @@
+<!-- 여기는 서브메뉴를 만들어 놓은 컴포넌트야! -->
 <template>
   <div id="submenu">
     <div>
@@ -35,12 +36,8 @@
       <p>강준희 곽승민 김세훈</p>
       <p>송지연 장유정 허승연</p>
     </div>
-    <div ref="refUserInfo" id="user_info">
-      <div>
-        <a v-bind:href="link_login">로그인</a>
-        <a v-bind:href="link_sign">회원가입</a>
-      </div>
-    </div>
+    <router-view ref="refUserInfo" id="user_info">
+    </router-view>
   </div>
 </template>
 
@@ -74,13 +71,11 @@ export default {
 
     const ulObject = this.$refs.reful
     const createrObject = this.$refs.refcreater
-    const userinfoObject = this.$refs.refUserInfo
 
     ulObject.style.width = (imgLogWidth - 60) + 'px'
     ulObject.style.marginTop = imgLogHeight + 'px'
     createrObject.style.width = (imgLogWidth - imgLogWidth / 5) + 'px'
     createrObject.style.marginLeft = (imgLogWidth / 5) / 2 + 'px'
-    userinfoObject.style.height = imgLogHeight + 'px'
   }
 }
 </script>
@@ -154,15 +149,6 @@ ul li ul{
   bottom: 0px;
   right: 0px;
   margin-right: 3%;
-}
-#user_info div{
-  margin-top: 50%;
-}
-#user_info a{
-  color: black;
-  text-decoration: none;
-  font-size: 13px;
-  padding-right: 5px;
-  padding-left: 5px;
+  margin-top: 4%;
 }
 </style>
