@@ -1,5 +1,10 @@
 <template>
     <div class="login">
+        <div class="logo">
+            <a v-bind:href="link_main">
+            <img ref="refLogo" v-bind:src='img_logo'>
+        </a>
+        </div>
         <div class="loginbox">
             <p>지금 바로 로그인 하세요.</p>
             <div class="login_input_box">
@@ -32,13 +37,25 @@
 export default {
   data () {
     return {
+      img_logo: require('../assets/teeth_logo.png'),
       link_search_id: 'http://localhost:8080/search_id',
-      link_search_pw: 'http://localhost:8080/search_pw'
+      link_search_pw: 'http://localhost:8080/search_pw',
+      link_main: 'http://localhost:8080/main'
     }
   }
 }
 </script>
 <style scoped>
+    .logo{
+        width: fit-content;
+        height: fit-content;
+        top: 0px;
+        position: absolute;
+        left: 0px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
     .loginbox{
         left: 0px;
         right: 0px;
