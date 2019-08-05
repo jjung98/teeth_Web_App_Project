@@ -16,8 +16,8 @@
               <a v-bind:href="link_filla">오랄 필라테스</a>
             </li>
             <li>
-              <a @mouseover="viewsubmenu">치매 예방 게임</a>
-              <ul class="submenu"  ref="refsumenu">
+              <a @mouseover="viewsubmenu" @mouseleave="nonviewsubmenu">치매 예방 게임</a>
+              <ul class="submenu" ref="refsumenu">
                 <li>
                   <a>같은 그림찾기</a>
                 </li>
@@ -51,6 +51,10 @@ export default {
     viewsubmenu: function () {
       const submenuObject = this.$refs.refsumenu
       submenuObject.style.display = 'block'
+    },
+    nonviewsubmenu: function () {
+      const submenuObject = this.$refs.refsumenu
+      submenuObject.style.display = 'none'
     }
   }
 }
