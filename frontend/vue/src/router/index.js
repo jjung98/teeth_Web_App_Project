@@ -8,6 +8,7 @@ import LoginBerfore from '@/components/LoginBefore'
 import Compo1 from '@/components/Component1'
 import Compo2 from '@/components/Component2'
 import Dementia from '@/components/DementiaEncyclopedia'
+import SignUp from '@/components/SignUp'
 
 Vue.use(VueRouter)
 
@@ -25,7 +26,8 @@ const router = new VueRouter({
     {path: '*', component: Developing},
     {path: '/component',
       component: Compo1,
-      children: [{path: '/', component: Compo2}]}
+      children: [{path: '/', component: Compo2}]},
+    {path: '/sign', component: SignUp}
   ]
 })
 
