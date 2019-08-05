@@ -50,10 +50,18 @@ export default {
         width: fit-content;
         height: fit-content;
         top: 0px;
-        position: absolute;
+        bottom: 0px;
         left: 0px;
-        margin-top: 10px;
-        margin-left: 10px;
+        right: 0px;
+        position: absolute;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img{
+        width: 60%;
+        height: 22%;
     }
 
     .loginbox{
@@ -66,14 +74,14 @@ export default {
         position: absolute;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 8%;
+        margin-top: 17%;
         font-family: Noto Sans DemiLight,AppleSDGothicNeo-Regular,Malgun Gothic,맑은 고딕,dotum,돋움,sans-serif;
     }
     .loginbox p{
         font-size: 24px;
         font-weight: 400;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     .login_input_box{
         border: solid 1px #C4DEFF;

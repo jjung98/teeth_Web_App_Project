@@ -2,9 +2,9 @@
 <template>
   <div>
     <div>
-      <div style="float: left;">
+      <div style="width: 100%; margin-top: 15px;">
         <img ref="refLogo" v-bind:src='img_logo'>
-        <div style="display: inline-block;">
+        <div style="display: inline-block; float: left;">
           <ul class="menu">
             <li>
               <a v-bind:href="link_dire">치매백과사전</a>
@@ -17,14 +17,14 @@
             </li>
             <li>
               <a>치매 예방 게임</a>
-            </li>
-          </ul>
-          <ul class="submenu"  ref="refsumenu">
-            <li>
-              <a>같은 그림찾기</a>
-            </li>
-            <li>
-              <a>파타카라 운동</a>
+              <ul class="submenu"  ref="refsumenu">
+                <li>
+                  <a>같은 그림찾기</a>
+                </li>
+                <li>
+                  <a>파타카라 운동</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -53,8 +53,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 div img{
-  width: fit-content;
-  height: fit-content;
+  width: 25%;
+  height: 100%;
+  float: left;
 }
 
 .menu{
@@ -62,7 +63,7 @@ div img{
   list-style: none;
   text-align: left;
   color: #000000;
-  padding: 0px 30px 13px 90px;
+  padding: 40px 30px 13px 10px;
   height: 100%;
   font-family: Noto Sans Medium,AppleSDGothicNeo-Regular,Malgun Gothic,맑은 고딕,dotum,돋움,sans-serif;
 }
@@ -84,22 +85,17 @@ ul li a:hover{
   text-decoration: underline;
 }
 
-ul li ul{
-  padding: 0;
-  border: none;
-  margin-left: 25px;
-}
-
 .submenu{
     display: block;
-    margin-left: 0;
+    margin-right: 0;
     padding-left: 40px;
     list-style: none;
+    margin-top: 10px;
 }
 
 #user_info{
   margin-right: 3%;
   float: right;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 </style>
