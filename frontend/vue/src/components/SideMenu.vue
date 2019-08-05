@@ -16,7 +16,7 @@
               <a v-bind:href="link_filla">오랄 필라테스</a>
             </li>
             <li>
-              <a>치매 예방 게임</a>
+              <a @mouseover="viewsubmenu">치매 예방 게임</a>
               <ul class="submenu"  ref="refsumenu">
                 <li>
                   <a>같은 그림찾기</a>
@@ -41,10 +41,16 @@ export default {
   data () {
     return {
       img_logo: require('../assets/teeth_logo.png'),
-      link_dire: 'http://localhost:8080/dire',
+      link_dire: 'http://localhost:8080/dementia',
       link_test: 'http://localhost:8080/test',
       link_filla: 'http://localhost:8080/filla',
       link_game: 'http://localhost:8080/game'
+    }
+  },
+  methods: {
+    viewsubmenu: function () {
+      const submenuObject = this.$refs.refsumenu
+      submenuObject.style.display = 'block'
     }
   }
 }
@@ -86,7 +92,7 @@ ul li a:hover{
 }
 
 .submenu{
-    display: block;
+    display: none;
     margin-right: 0;
     padding-left: 40px;
     list-style: none;

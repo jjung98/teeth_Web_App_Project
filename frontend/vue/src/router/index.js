@@ -7,17 +7,21 @@ import Login from '@/components/Login'
 import LoginBerfore from '@/components/LoginBefore'
 import Compo1 from '@/components/Component1'
 import Compo2 from '@/components/Component2'
+import Dementia from '@/components/DementiaEncyclopedia'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    {path: '/home', component: Home},
+    {path: '/', component: Home},
     {path: '/main',
       component: SideMenu,
       children: [{path: '/', component: LoginBerfore}]},
     {path: '/login', component: Login},
+    {path: '/dementia',
+      component: Dementia,
+      children: [{path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]}]},
     {path: '*', component: Developing},
     {path: '/component',
       component: Compo1,
