@@ -38,7 +38,7 @@ export default {
     return {
       img_logo: require('../assets/teeth_logo.png'),
       link_main: 'http://localhost:8080/main',
-      result: 'OK',
+      result: 'OK', // 여기는 데이터베이스에서 이미 있는 아이디값인지 비교해서 OK/NO값 넣기!
       isPossible: ''
     }
   },
@@ -46,9 +46,10 @@ export default {
     onClickButton () {
       console.log(this)
       if (this.result === 'OK') {
+        document.getElementById('idLabel').style.color = '#0000ff'
         this.isPossible = '사용가능한 아이디입니다.'
-        document.getElementById()
       } else if (this.result === 'NO') {
+        document.getElementById('idLabel').style.color = '#ff0000'
         this.isPossible = '이미 사용중인 아이디입니다.'
       } else {
         this.isPossible = ''
