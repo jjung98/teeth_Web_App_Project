@@ -16,7 +16,8 @@
               <a v-bind:href="link_filla">오랄 필라테스</a>
             </li>
             <li>
-              <a @mouseover="viewsubmenu" @mouseleave="nonviewsubmenu">치매 예방 게임</a>
+              <div class='gameMenu' @mouseover="viewsubmenu" @mouseleave="nonviewsubmenu">
+                <a >치매 예방 게임</a>
               <ul class="submenu" ref="refsumenu">
                 <li>
                   <a>같은 그림찾기</a>
@@ -25,6 +26,7 @@
                   <a>파타카라 운동</a>
                 </li>
               </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -107,5 +109,10 @@ ul li a:hover{
   margin-right: 3%;
   float: right;
   margin-top: 3%;
+}
+
+.gameMenu{
+  width: fit-content;
+  height: fit-content;
 }
 </style>
