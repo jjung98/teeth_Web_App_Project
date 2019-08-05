@@ -44,7 +44,7 @@ export default {
     return {
       img_logo: require('../assets/teeth_logo.png'),
       link_dire: 'http://localhost:8080/dementia',
-      link_test: 'http://localhost:8080/test',
+      link_test: 'http://localhost:8080/selfDiagnosis',
       link_filla: 'http://localhost:8080/filla',
       link_game: 'http://localhost:8080/game'
     }

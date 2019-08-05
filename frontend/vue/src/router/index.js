@@ -9,6 +9,7 @@ import Compo1 from '@/components/Component1'
 import Compo2 from '@/components/Component2'
 import Dementia from '@/components/DementiaEncyclopedia'
 import SignUp from '@/components/SignUp'
+import SelfDiagnosis from '@/components/Self-diagnosisForDementia'
 
 Vue.use(VueRouter)
 
@@ -27,7 +28,10 @@ const router = new VueRouter({
     {path: '/component',
       component: Compo1,
       children: [{path: '/', component: Compo2}]},
-    {path: '/sign', component: SignUp}
+    {path: '/sign', component: SignUp},
+    {path: '/selfDiagnosis',
+      component: SelfDiagnosis,
+      children: [{path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]}]}
   ]
 })
 
