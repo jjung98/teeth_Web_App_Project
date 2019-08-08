@@ -65,8 +65,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 div img{
-  width: 25%;
-  height: 100%;
+  width: 330px;
+  height: 120px;
   float: left;
 }
 
