@@ -17,15 +17,15 @@
             </li>
             <li>
               <div class='gameMenu' @mouseover="viewsubmenu" @mouseleave="nonviewsubmenu">
-                <a >치매 예방 게임</a>
-              <ul class="submenu" ref="refsumenu">
-                <li>
-                  <a>같은 그림찾기</a>
-                </li>
-                <li>
-                  <a>파타카라 운동</a>
-                </li>
-              </ul>
+                <a>치매 예방 게임</a>
+                <ul class="submenu">
+                  <li>
+                    <a ref="refsubmenu1" style="display: none;">같은 그림찾기</a>
+                  </li>
+                  <li>
+                    <a ref="refsubmenu2" style="display: none;">파타카라 운동</a>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -45,18 +45,22 @@ export default {
       img_logo: require('../assets/teeth_logo.png'),
       link_dire: 'http://localhost:8080/dementia',
       link_test: 'http://localhost:8080/selfDiagnosis',
-      link_filla: 'http://localhost:8080/filla',
+      link_filla: 'http://localhost:8080/pilates',
       link_game: 'http://localhost:8080/game'
     }
   },
   methods: {
     viewsubmenu: function () {
-      const submenuObject = this.$refs.refsumenu
-      submenuObject.style.display = 'block'
+      const submenuObject1 = this.$refs.refsubmenu1
+      const submenuObject2 = this.$refs.refsubmenu2
+      submenuObject1.style.display = 'block'
+      submenuObject2.style.display = 'block'
     },
     nonviewsubmenu: function () {
-      const submenuObject = this.$refs.refsumenu
-      submenuObject.style.display = 'none'
+      const submenuObject1 = this.$refs.refsubmenu1
+      const submenuObject2 = this.$refs.refsubmenu2
+      submenuObject1.style.display = 'none'
+      submenuObject2.style.display = 'none'
     }
   }
 }
@@ -65,9 +69,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 div img{
-  width: 330px;
-  height: 120px;
+  width: 240px;
+  height: 80px;
   float: left;
+  margin-left: 15px;
 }
 
 .menu{
@@ -75,7 +80,7 @@ div img{
   list-style: none;
   text-align: left;
   color: #000000;
-  padding: 40px 30px 13px 10px;
+  padding: 30px 30px 5px 20px;
   height: 100%;
   font-family: Noto Sans Medium,AppleSDGothicNeo-Regular,Malgun Gothic,맑은 고딕,dotum,돋움,sans-serif;
 }
@@ -88,7 +93,7 @@ ul li{
 ul li a{
     padding: 0 7px 0 17px;
     color: #6798FD;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     text-decoration: none;
 }
@@ -98,7 +103,6 @@ ul li a:hover{
 }
 
 .submenu{
-    display: none;
     margin-right: 0;
     padding-left: 40px;
     list-style: none;
@@ -114,5 +118,6 @@ ul li a:hover{
 .gameMenu{
   width: fit-content;
   height: fit-content;
+  margin-bottom: 30px;
 }
 </style>
