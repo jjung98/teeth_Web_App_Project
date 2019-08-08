@@ -80,7 +80,7 @@ div img{
   list-style: none;
   text-align: left;
   color: #000000;
-  padding: 30px 30px 5px 20px;
+  padding: 30px 300px 5px 20px;
   height: 100%;
   font-family: Noto Sans Medium,AppleSDGothicNeo-Regular,Malgun Gothic,맑은 고딕,dotum,돋움,sans-serif;
 }
@@ -103,7 +103,7 @@ ul li a:hover{
 }
 
 .submenu{
-    margin-right: 0;
+    margin-right: 20px;
     padding-left: 40px;
     list-style: none;
     margin-top: 10px;
@@ -113,6 +113,7 @@ ul li a:hover{
   margin-right: 3%;
   float: right;
   margin-top: 3%;
+  margin-left: 10%;
 }
 
 .gameMenu{
