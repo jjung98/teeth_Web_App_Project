@@ -4,15 +4,15 @@
         <router-view>
         </router-view>
         <div class="content">
-            <h2>치매 자가진단</h2>
+            <h2 class="title">치매 자가진단</h2>
             <div class="titleArea" ref="firstScreen">
                 <p>※ 스스로 진단하는지, 보호자가 대신 진단하는지를 선택해주세요.</p>
                 <div class="optionArea">
                     <label class="radio">
-                        <input name="option" v-model="option" type="radio" v-on:click="onClickOption"> 스스로 검사
+                        <input name="option" type="radio" v-on:click="onClickOption"> 스스로 검사
                     </label>
                     <label class="radio">
-                        <input name="option" v-model="option" type="radio" v-on:click="onClickOption"> 보호자 검사
+                        <input name="option" type="radio" v-on:click="onClickOption"> 보호자 검사
                     </label>
                 </div>
                 <div class="infoArea">
@@ -253,7 +253,7 @@ export default {
     }
     .content{
         display: inline-block;
-        margin-top: 20px;
+        margin-top: 5px;
     }
     .optionArea{
         margin-bottom: 20px;
@@ -274,5 +274,8 @@ export default {
     }
     .startBtn{
         float: center;
+    }
+    .title{
+        text-align: left;
     }
 </style>
