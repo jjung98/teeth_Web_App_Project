@@ -4,7 +4,7 @@
     <div>
       <div style="width: 100%; margin-top: 15px;">
         <img ref="refLogo" v-bind:src='img_logo'>
-        <div style="display: inline-block; float: left;">
+        <div style="display: inline-block; float: left; height: 130px;">
           <ul class="menu">
             <li>
               <a v-bind:href="link_dire">치매백과사전</a>
@@ -65,8 +65,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 div img{
-  width: 330px;
-  height: 120px;
+  width: 25%;
   float: left;
 }
 

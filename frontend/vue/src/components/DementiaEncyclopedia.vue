@@ -5,19 +5,20 @@
         </router-view>
         <div class="contur"></div>
         <div class="sidemenu">
-            <p>1. 건망증과 치매의 차이점</p>
-            <p>2. 치매의 증상</p>
-            <p>3. 치매환자의 구강문제</p>
-            <p>4. 치매환자의 구강 위생방법</p>
-            <p>5. 정상적인 노화과정에서의 뇌의 인지기능은 어떤가요?</p>
-            <p>6. 알츠하이머병은 어떻게 진행되나요?</p>
+            <a v-bind:href="part1"><p>1. 건망증과 치매의 차이점</p></a>
+            <a v-bind:href="part2"><p>2. 치매의 증상</p></a>
+            <a v-bind:href="part3"><p>3. 치매환자의 구강문제</p></a>
+            <a v-bind:href="part4"><p>4. 치매환자의 구강 위생방법</p></a>
+            <a v-bind:href="part5"><p>5. 정상적인 노화과정에서의 뇌의 인지기능은 어떤가요?</p></a>
+            <a v-bind:href="part6"><p>6. 알츠하이머병은 어떻게 진행되나요?</p></a>
         </div>
         <div class="dementia">
             <div class="part1" style="margin-top: 0;">
                 <h1>1. 건망증과 치매의 차이점</h1>
                 <p>나이가 들면 기억력이 떨어져 건망증이 잘 생깁니다. 건망증은 어떤 사실을 기억을 하지만 저장된 기억을 불러들이는 과정에 장애가 있어서 주로 발생합니다.
-                     건망증인 경우 차근차근 생각을 더듬어 보면 잊었던 사실을 기억을 해내는 수가 많습니다. 그러나 치매에서 보이는 기억장에는 그런 사실 자체를 잊어버리게 됩니다. "중요한 약속이 있었는데 어디서 몇 시에 모이기로 했더라?"
-                    이렇게 되면 건망증이고 "뭐? 나는 그런 약속을 한 적이 없다고 하면 치매에 의한 기억장애일 가능성이 있습니다. 치매는 단순한 기억장애가 아니라 다른 여러 인지기능의 장애가 동반되어 사회생활이나 일상생활에 지장을 주는 경우를 말합니다.기억장애만 있고 다른 장애는 없는 경우를
+                    <br>건망증인 경우 차근차근 생각을 더듬어 보면 잊었던 사실을 기억을 해내는 수가 많습니다. 그러나 치매에서 보이는 기억장에는 그런 사실 자체를 잊어버리게 됩니다. "중요한 약속이 있었는데 어디서 몇 시에 모이기로 했더라?"
+                    이렇게 되면 건망증이고 "뭐? 나는 그런 약속을 한 적이 없다고 하면 치매에 의한 기억장애일 가능성이 있습니다.
+                    <br>치매는 단순한 기억장애가 아니라 다른 여러 인지기능의 장애가 동반되어 사회생활이나 일상생활에 지장을 주는 경우를 말합니다.기억장애만 있고 다른 장애는 없는 경우를
                      경한 인지기능장애라고 하는데 이런 사람들 중 20% 정도는 치매로 발전하기 때문에 계속적인 관찰이 필요합니다.
                 </p>
             </div>
@@ -106,6 +107,7 @@
                     알츠하이머병은 증상 발생 후 짧게는 2년 길게는 20년 이상 생존하기도 합니다. 평균 생존 기간은 8년 정도 입니다. 알츠하이명 병을 초기, 중기, 말기로 구분하기도 합니다만
                      사람에 따라 어느 단계에서 어느정도 지속될지 일률적으로 진행단계를 예측하기는 어렵습니다.
                 </p>
+                <br>
                 <p>진행단계는 다음과 같습니다.</p>
                 <p>
                     1단계 : 초기증상은 경미한 기억장애로서 매우 서서히 나타납니다. 기억장애는 주로 최근의 사건에 관한 것이며 대화도중 적절한 단어를 찾지 못하며 일의 능률이 떨어지고 성격의
@@ -124,8 +126,19 @@
         </div>
     </div>
 </template>
+<script src="https://unpkg.com/vue@2.4.2"></script>
 <script>
-export default {
+export default{
+    data () {
+        return {
+            part1: 'http://localhost:8080/dementia/#part1',
+            part2: 'http://localhost:8080/dementia/#part2',
+            part3: 'http://localhost:8080/dementia/#part3',
+            part4: 'http://localhost:8080/dementia/#part4',
+            part5: 'http://localhost:8080/dementia/#part5',
+            part6: 'http://localhost:8080/dementia/#part6'
+        }
+    }
 }
 </script>
 <style scoped>
@@ -146,11 +159,16 @@ width: 99%;
 }
 .sidemenu{
     float: left;
-    width: 300px;
+    width: 20%;
     text-align: left;
     padding-top: 30px;
     font-size: 13px;
     padding-left: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
 .dementia {
     display: inline-block;
