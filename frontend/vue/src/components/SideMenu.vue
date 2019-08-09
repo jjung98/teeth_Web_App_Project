@@ -20,7 +20,7 @@
                 <a>치매 예방 게임</a>
                 <ul class="submenu">
                   <li>
-                    <a ref="refsubmenu1" style="display: none;">같은 그림찾기</a>
+                    <a v-bind:href="link_find_same_game" ref="refsubmenu1" style="display: none;">같은 그림찾기</a>
                   </li>
                   <li>
                     <a ref="refsubmenu2" style="display: none;">파타카라 운동</a>
@@ -46,7 +46,8 @@ export default {
       link_dire: 'http://localhost:8080/dementia',
       link_test: 'http://localhost:8080/selfDiagnosis',
       link_filla: 'http://localhost:8080/pilates',
-      link_game: 'http://localhost:8080/game'
+      link_game: 'http://localhost:8080/game',
+      link_find_same_game: 'http://localhost:8080/game/find_same_picture'
     }
   },
   methods: {

@@ -10,6 +10,7 @@ import Compo2 from '@/components/Component2'
 import Dementia from '@/components/DementiaEncyclopedia'
 import SignUp from '@/components/SignUp'
 import SelfDiagnosis from '@/components/Self-diagnosisForDementia'
+import FindSameFicture from '@/components/games/FindSamePictureGame'
 
 Vue.use(VueRouter)
 
@@ -17,23 +18,36 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {path: '/', component: Home},
-    {path: '/main',
+    {
+      path: '/main',
       component: SideMenu,
-      children: [{path: '/', component: LoginBerfore}]},
+      children: [{path: '/', component: LoginBerfore}]
+    },
     {path: '/login', component: Login},
-    {path: '/dementia',
+    {
+      path: '/dementia',
       component: Dementia,
       children: [
         {path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]},
-        {path: '/#part1'}]},
+        {path: '/#part1'}]
+    },
     {path: '*', component: Developing},
-    {path: '/component',
+    {
+      path: '/component',
       component: Compo1,
-      children: [{path: '/', component: Compo2}]},
+      children: [{path: '/', component: Compo2}]
+    },
     {path: '/sign', component: SignUp},
-    {path: '/selfDiagnosis',
+    {
+      path: '/selfDiagnosis',
       component: SelfDiagnosis,
-      children: [{path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]}]}
+      children: [{path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]}]
+    },
+    {
+      path: '/game/find_same_picture',
+      component: FindSameFicture,
+      children: [{path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]}]
+    }
   ]
 })
 
