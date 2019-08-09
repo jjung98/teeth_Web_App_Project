@@ -69,12 +69,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 div img{
-<<<<<<< HEAD
   width: 25%;
-=======
-  width: 240px;
-  height: 80px;
->>>>>>> fdb9ad4dfc89fa3f5507e9d6840d1361ce2c82a6
   float: left;
   margin-left: 15px;
 }
@@ -84,7 +79,7 @@ div img{
   list-style: none;
   text-align: left;
   color: #000000;
-  padding: 30px 300px 5px 20px;
+  padding: 30px 0 0 20px;
   height: 100%;
   font-family: Noto Sans Medium,AppleSDGothicNeo-Regular,Malgun Gothic,맑은 고딕,dotum,돋움,sans-serif;
 }
@@ -117,7 +112,6 @@ ul li a:hover{
   margin-right: 3%;
   float: right;
   margin-top: 3%;
-  margin-left: 10%;
 }
 
 .gameMenu{

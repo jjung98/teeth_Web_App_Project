@@ -23,7 +23,9 @@ const router = new VueRouter({
     {path: '/login', component: Login},
     {path: '/dementia',
       component: Dementia,
-      children: [{path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]}]},
+      children: [
+        {path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]},
+        {path: '/#part1'}]},
     {path: '*', component: Developing},
     {path: '/component',
       component: Compo1,
