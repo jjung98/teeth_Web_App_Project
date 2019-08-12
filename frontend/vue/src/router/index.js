@@ -10,6 +10,7 @@ import Compo2 from '@/components/Component2'
 import Dementia from '@/components/DementiaEncyclopedia'
 import SignUp from '@/components/SignUp'
 import SelfDiagnosis from '@/components/Self-diagnosisForDementia'
+import OralPilates from '@/components/OralPilates'
 import FindSameFicture from '@/components/games/FindSamePictureGame'
 
 Vue.use(VueRouter)
@@ -46,6 +47,11 @@ const router = new VueRouter({
     {
       path: '/game/find_same_picture',
       component: FindSameFicture,
+      children: [{path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]}]
+    },
+    {
+      path: '/pilates',
+      component: OralPilates,
       children: [{path: '/', component: SideMenu, children: [{path: '/', component: LoginBerfore}]}]
     }
   ]
