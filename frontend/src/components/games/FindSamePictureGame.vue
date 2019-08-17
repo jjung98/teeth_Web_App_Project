@@ -17,7 +17,7 @@
     </div>
 </div>
 </template>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 // 게임 상태
 var gameState = ''
