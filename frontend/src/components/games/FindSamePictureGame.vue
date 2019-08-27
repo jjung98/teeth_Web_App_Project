@@ -1,19 +1,29 @@
 
 <template>
-<div id="table">
+<div>
     <router-view>
     </router-view>
-    <div id="same_game">
-        <h1>같은 그림 찾기 게임</h1>
-        <div id="infoDiv">
-            <button v-on:click="gameStart">게임시작</button>
-            <span>점수 : <span id='score'>0</span></span>
-            <div id='info'> 게임시작 버튼을 눌러주세요<br></div>
-        </div>
-        <div id="gameDiv">
-            <div id='countDown'>ready</div>
-            <table id="cardTable"></table>
-        </div>
+    <div>
+        <table>
+            <tr>
+                <td><img v-bind:src="img_bull"></td>
+                <td><img v-bind:src="img_chick"></td>
+                <td><img v-bind:src="img_crab"></td>
+                <td><img v-bind:src="img_fox"></td>
+            </tr>
+            <tr>
+                <td><img v-bind:src="img_hedgehog"></td>
+                <td><img v-bind:src="img_hippopotamus"></td>
+                <td><img v-bind:src="img_koala"></td>
+                <td><img v-bind:src="img_lemur"></td>
+            </tr>
+            <tr>
+                <td><img v-bind:src="img_pig"></td>
+                <td><img v-bind:src="img_tiger"></td>
+                <td><img v-bind:src="img_whale"></td>
+                <td><img v-bind:src="img_zebra"></td>
+            </tr>
+        </table>
     </div>
 </div>
 </template>
@@ -157,48 +167,26 @@ function scoreMinus(){
 }
 
 export default {
-  methods: {
-    gameStart: function () {
-      console.log('게임시작')
-      if (gameState === '') {
-        startGame()
-        gameState = 'alreadyStart'
-      }
+  data () {
+    return {
+      img_bull: require('../../assets/find_same_picture/bull.png'),
+      img_chick: require('../../assets/find_same_picture/chick.png'),
+      img_crab: require('../../assets/find_same_picture/crab.png'),
+      img_fox: require('../../assets/find_same_picture/fox.png'),
+      img_hedgehog: require('../../assets/find_same_picture/hedgehog.png'),
+      img_hippopotamus: require('../../assets/find_same_picture/hippopotamus.png'),
+      img_koala: require('../../assets/find_same_picture/koala.png'),
+      img_lemur: require('../../assets/find_same_picture/lemur.png'),
+      img_pig: require('../../assets/find_same_picture/pig.png'),
+      img_tiger: require('../../assets/find_same_picture/tiger.png'),
+      img_whale: require('../../assets/find_same_picture/whale.png'),
+      img_zebra: require('../../assets/find_same_picture/zebra.png')
     }
   }
 }
 </script>
 <style scoped>
-#same_game{
-    display: inline-block;
-    width: 80%;
-    height: auto;
-    margin-top: 25px;
-}
-#infoDiv{
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-button {
-    padding: 10px 20px;
-    margin-right: 40px;
-    margin-bottom: 10px;
-}
-#countDown {
-    width: 474px;
-    margin: auto;
-    padding: 10px 0;
-    font-size: 20px;
-    font-weight: bold;
-}
-#cardTable {
-    width: 474px;
-    height: 474px;
-    margin: auto;
-    margin-bottom: 40px;
-    border-collapse: collapse;
-}
-#cardTable td{
-    border: solid #9DCEFF;
+img{
+    width: 100px;
 }
 </style>

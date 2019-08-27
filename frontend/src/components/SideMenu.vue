@@ -3,9 +3,7 @@
   <div>
     <div>
       <div style="width: 100%; margin-top: 15px;">
-        <a  v-bind:href="link_home">
-          <img ref="refLogo" v-bind:src='img_logo'>
-        </a>
+        <img ref="refLogo" v-bind:src='img_logo'>
         <div style="display: inline-block; float: left; height: 130px;">
           <ul class="menu">
             <li>
@@ -45,7 +43,6 @@ export default {
   data () {
     return {
       img_logo: require('../assets/teeth_logo.png'),
-      link_home: 'http://localhost:8080/main',
       link_dire: 'http://localhost:8080/dementia',
       link_test: 'http://localhost:8080/selfDiagnosis',
       link_filla: 'http://localhost:8080/pilates',
